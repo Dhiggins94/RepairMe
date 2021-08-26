@@ -13,7 +13,6 @@ User.destroy_all
 
 
 @admin = User.create!(username: 'divine', email: 'divine@email.com', password: '123456')
-
 puts "#{User.count} users created"
 
 
