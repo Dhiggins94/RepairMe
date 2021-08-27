@@ -12,7 +12,7 @@ Electronic.destroy_all
 User.destroy_all
 
 
-@admin = User.create!(username: 'divine', email: 'divine@email.com', password_digest: "12345789")
+@admin = User.create!(username: 'divine', email: 'divine@email.com', password: "12345789")
 puts "#{User.count} users created"
 
 
