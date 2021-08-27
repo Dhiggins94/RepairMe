@@ -21,8 +21,8 @@ class ElectronicsController < ApplicationController
   #     render json: @electronic.errors, status: :unprocessable_entity
   #   end
 
-    # Only allow a list of trusted parameters through.
-    def electronic_params
-      params.require(:electronic).permit(:name, :description, :imageUrl)
-    end
+    # # Only allow a list of trusted parameters through.
+    # def electronic_params
+    #   params.require(:electronic).permit(:name, :description, :image_url)
+    # end
 end

@@ -19,7 +19,7 @@ class RepairGuidesController < ApplicationController
     @repair_guide = RepairGuide.new(repair_guide_params)
       @repair_guide.user = @current_user
     if @repair_guide.save
-      render json: @repair_guide, include: :electronic, status: :ok
+      render json: @repair_guide, include: :electronic, status: :created
     else
       render json: @repair_guide.errors, status: :unprocessable_entity
     end
