@@ -30,10 +30,6 @@ end
 group :development do
   gem 'listen', '~> 3.3'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-<<<<<<< HEAD
-  gem 'pry-rails' 
-=======
->>>>>>> f0e3dce4c545237557d256a615b1492b7e10a950
   gem 'spring'
     gem 'pry-rails'
 
