@@ -34,7 +34,6 @@
 
 
 
-
 RepairGuide.destroy_all
 Electronic.destroy_all
 User.destroy_all
@@ -50,9 +49,15 @@ puts "#{Electronic.count} Electronic created!"
 
 @repair1 = RepairGuide.create!( user: @user, electronic: @nintendo_switch, image_url:'https://i.imgur.com/7dpAuXC.jpg',
 title: 'how to repalce the nintendo switch rear panel',
-steps: 'step 1: remove the joycons from the switch, step 2: remove the back-side screws of the switch, step 3: remove the top and bottom screws of the switch, step 4: remove the center screws, step 5: lift the kickstand on the back and unscrew the kickstand, step 6: open the game card cartridge flap and lift the rear panel up from the bottom of the device and remove it.',)
+steps: 'step 1: remove the joycons from the switch, 
+step 2: remove the back-side screws of the switch, 
+step 3: remove the top and bottom screws of the switch, 
+step 4: remove the center screws, 
+step 5: lift the kickstand on the back and unscrew the kickstand, 
+step 6: open the game card cartridge flap and lift the rear panel up from the bottom of the device and remove it.',)
 puts "#{RepairGuide.count} RepairGuide created!"
  
+
 
 
 
