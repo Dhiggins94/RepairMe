@@ -1,9 +1,14 @@
 import React from 'react'
+export default function Electronic(props) {
+  const {guide} = props
 
-export default function Electronic() {
+
   return (
     <div>
-      
+      <h3> Electronics</h3>
+      {guide.map((electronics) => {
+        <p key={electronics.id}> {electronics.name}</p>
+      })}
     </div>
   )
 }
