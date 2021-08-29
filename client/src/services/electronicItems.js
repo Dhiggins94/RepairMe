@@ -5,7 +5,7 @@ export const getAllElectronics = async () => {
   return resp.data
 }
 
-export const getElectronic = async () => {
+export const getElectronic = async (id) => {
   const resp = await api.get(`/electronics/${id}`)
   return resp.data
 }

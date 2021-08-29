@@ -7,7 +7,7 @@ export default function Electronic(props) {
     <div>
       <h3> Electronics</h3>
       {guide.map((electronics) => {
-        <p key={electronics.id}> {electronics.name}</p>
+        <p key={electronics.id}> {electronics.name} {electronics.description} </p>
       })}
     </div>
   )

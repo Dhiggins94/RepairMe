@@ -3,19 +3,19 @@ import React, { useState } from 'react'
 export default function CreateGuide(props) {
   
   const [formData, setFormData] = useState({
-    image: '',
+    image_url: '',
     title: '',
     steps: ''
 
   });
-  const { image, title, steps } = formData;
+  const { image_url, title, steps } = formData;
   const { handleCreate } = props;
 
   const { handleChange } = (e) => {
-    const { image, title, steps, value } = e.target;
+    const {name , value } = e.target;
     setFormData((prevState) => ({
       ...prevState,
-      [image, title, steps]: value,
+      [name]: value,
     }));
   };  
 
@@ -32,16 +32,16 @@ export default function CreateGuide(props) {
       <h3>Create Repair Guide</h3>
       <label>
         Image:
-        <input type='image' image='image'  value={image} onChange={handleChange} />
+        <input type='image_url'  src='image_url' name='image_url'  value={image_url} onChange={handleChange} />
       </label>
       <br />
       <label>
         Title:
-        <input type='text' title='title' value={title} onChange={handleChange} />
+        <input type='text'  name="title" value={title} onChange={handleChange} />
       </label>
       <label>
         Steps:
-        <input type='textarea' steps='steps' value={steps} onChange={handleChange} />
+        <input type='textarea' name='steps' value={steps} onChange={handleChange} />
       </label>
       <button>Submit</button>
     </form>

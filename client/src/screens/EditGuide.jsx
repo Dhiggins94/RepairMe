@@ -4,7 +4,7 @@ import {useParams} from 'react-router-dom';
 
 export default function EditGuide(props) {
   const [formData, setFormData] = useState({
-    image: '',
+    image_url: '',
     title: '',
     steps: ''
 
@@ -23,10 +23,10 @@ export default function EditGuide(props) {
   }, [guides, id])
 
   const handleChange = (e) => {
-    const {image, title, steps, value} = e.target;
+    const {image_url, value} = e.target;
     setFormData(prevState => ({
       ...prevState,
-      [image, title, steps]: value
+      [image_url]: value
     }))
   }
 
@@ -41,8 +41,8 @@ export default function EditGuide(props) {
         Image:
         <input 
           type='image' 
-          image='image' 
-          value={formData.image} 
+          image_url='image_url' alt="images"
+          value={formData.image_url} 
           onChange={handleChange}
         />
       </label>

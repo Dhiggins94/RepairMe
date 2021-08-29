@@ -35,7 +35,7 @@ export default function MainContainer(props) {
 
   const handleCreate = async (formData) => {
     const guideData = await postRepairGuide(formData);
-    setFoods((prevState) => [...prevState, guideData]);
+    setGuides((prevState) => [...prevState, guideData]);
     history.push('/repair_guides');
   };
 
