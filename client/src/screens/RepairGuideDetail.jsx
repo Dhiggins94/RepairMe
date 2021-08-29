@@ -34,3 +34,14 @@
       <img src={electronics?.image} alt="device"></img>
       <br />
       <p>{electronics?.steps}</p> */}
+
+      import React from 'react'
+      
+      export default function RepairGuideDetail() {
+        return (
+          <div>
+            
+          </div>
+        )
+      }
+      

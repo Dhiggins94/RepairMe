@@ -7,7 +7,7 @@ import CreateGuide from '../screens/CreateGuide.jsx'
 import EditGuide from '../screens/EditGuide'
 import Electronic from '../screens/Electronic'
 import RepairGuides from '../screens/RepairGuides'
-
+import RepairGuidesDetails from '../screens/RepairGuideDetail'
 export default function MainContainer(props) {
   const [guides, setGuides] = useState([])
   const [electronics, setElectronics] = useState([]);
@@ -40,10 +40,10 @@ export default function MainContainer(props) {
   };
 
   const handleUpdate = async (id, formData) => {
-    const foodData = await putFood(id, formData);
+    const guideData = await putRepairGuide(id, formData);
     setGuides((prevstate) =>
       prevstate.map((repairGuide) => {
-        return repairGuide.id === Number(id) ? repairGuideData : rerepairGuide;
+        return repairGuide.id === Number(id) ? guideData : repairGuide;
       })
     );
     history.push('/repair_guides');
@@ -55,12 +55,29 @@ export default function MainContainer(props) {
   };
 
 
-
-
-
   return (
     <div>
-      
+      <switch>
+        <Route path='/repair_guides'>
+          <RepairGuides guides={guides}/>
+        </Route>
+        <Route path="/repair_guides/:id">
+          <EditGuide guides={guides} handleUpdate={handleUpdate}/>
+        </Route>
+        <Route path='/repair_guides/new'>
+          <CreateGuide handleCreate={handleCreate} />
+        </Route>
+        <Route path='/repair_guides/:id'>
+          <RepairGuidesDetails guides={guides} />
+        </Route>
+        <Route path='/electronics'>
+          <Electronic
+            electronics={electronics}
+            handleDelete={handleDelete}
+            currentUser={currentUser}
+          />
+        </Route>
+      </switch>
     </div>
   )
 }
