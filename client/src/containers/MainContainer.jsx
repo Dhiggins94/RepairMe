@@ -57,7 +57,7 @@ export default function MainContainer(props) {
 
   return (
     <div>
-      <switch>
+      <Switch>
         <Route path='/repair_guides'>
           <RepairGuides guides={guides}/>
         </Route>
@@ -77,7 +77,7 @@ export default function MainContainer(props) {
             currentUser={currentUser}
           />
         </Route>
-      </switch>
+      </Switch>
     </div>
   )
 }
