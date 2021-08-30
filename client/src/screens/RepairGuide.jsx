@@ -2,7 +2,7 @@
  import { useParams } from 'react-router-dom';
  import { getOneRepairGuide } from '../services/repairGuide';
 
- export default function RepairGuideDetail(props) {
+ export default function RepairGuide(props) {
 console.log(props)
    const [guides, setGuides] = useState(null);
    const { id } = useParams();
