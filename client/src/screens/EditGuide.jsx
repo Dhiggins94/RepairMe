@@ -40,7 +40,7 @@ export default function EditGuide(props) {
       <label>
         Image:
         <input 
-          type='image'  src='image_url' alt="images"
+          type='text'  src='image_url' 
           name='image_url'
           value={formData.image_url} 
           onChange={handleChange}
