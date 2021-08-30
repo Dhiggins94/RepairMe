@@ -76,6 +76,7 @@ setNewGuide(newGuide)
           onChange={handleChange}
         />
       </label>
+      <br />
       <label>
         Image:
         <input

@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState, useEffect } from 'react';
 import { Switch, Route, useHistory, useParams } from 'react-router-dom';
-import { getAllRepairGuide, postRepairGuide, putRepairGuide, deleteRepairGuide } from '../services/repairGuide';
+import { getAllRepairGuide, getOneRepairGuide, postRepairGuide, putRepairGuide, deleteRepairGuide } from '../services/repairGuide';
 import { getAllElectronics, getElectronic} from '../services/electronicItems'
 import CreateGuide from '../screens/CreateGuide.jsx'
 import EditGuide from '../screens/EditGuide'
@@ -14,7 +14,7 @@ export default function MainContainer(props) {
   const [guides, setGuides] = useState([])
   const [electronics, setElectronics] = useState([]);
   const [electronic, setElectronic] = useState([])
-  const {id} = useParams()
+  // const {id} = useParams()
   const { currentUser } = props;
   const history = useHistory()
   
@@ -34,16 +34,23 @@ export default function MainContainer(props) {
     fetchElectronics();
   }, []);
 
-  useEffect(() => {
-    const fetchElectronic = async () => {
-      const getElectronic = await getElectronic();
-      setElectronic(getElectronic);
-    };
-    fetchElectronic();
-  }, []);
+  // useEffect(() => {
+  //   const fetchElectronic = async () => {
+  //     const getElectronic = await getElectronic();
+  //     setElectronic(getElectronic);
+  //   };
+  //   fetchElectronic();
+  // }, []);
 
 
 
+  // useEffect(() => {
+  //   const fetchOneGuide = async () => {
+  //     const getOneGuide = await getOneRepairGuide();
+  //     setGuides(getOneRepairGuide);
+  //   };
+  //   fetchOneGuide();
+  // }, []);
 
   const handleCreate = async (formData) => {
     const guideData = await postRepairGuide(formData);
