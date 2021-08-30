@@ -6,16 +6,16 @@ export default function Electronic(props) {
   return (
     <div>
       <h3> Electronics</h3>
-      {electronics.map((product) => (
+      {electronics.map((electronic) => (
         <div>
-          <Link to={`/repair_guides/${id}`}> 
-          <p key={product?.id}>
+          <Link to={`/electronics/${id}`}> 
+          <p key={electronic?.id}>
             
-            {product?.name}
+            {electronic?.name}
             </p>
-            <img src={product?.image_url} alt="images"></img>
+            <img src={electronic?.image_url} alt="images"></img>
             </Link>
-          <p> {product?.description}</p>
+          <p> {electronic?.description}</p>
          
           </div>
       ))}

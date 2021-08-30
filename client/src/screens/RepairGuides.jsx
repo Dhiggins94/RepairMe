@@ -9,7 +9,7 @@ export default function RepairGuides(props) {
       <h3> Repair Guides</h3>
       {RepairGuides?.map((repair_guides) => (
         <div key={repair_guides?.id}>
-          <Link to={`/repair_guides/${id}`}>
+          <Link to={`/electronics/${id}`}>
             <h3>{repair_guides?.title}</h3>
           </Link>
           <p> {repair_guides?.steps}</p>

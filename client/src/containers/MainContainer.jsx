@@ -74,9 +74,16 @@ export default function MainContainer(props) {
         <Route path='/repair_guides'>
           <RepairGuides RepairGuides={guides}/>
         </Route>
-        <Route path='/electronics'>
+        <Route path='/electronics/'>
           <Electronic
             electronics={electronics}
+            // handleDelete={handleDelete}
+            currentUser={currentUser}
+          />
+        </Route>
+        <Route path='/electronics/:id'>
+          <RepairGuidesDetails
+            guides={guides}
             // handleDelete={handleDelete}
             currentUser={currentUser}
           />
