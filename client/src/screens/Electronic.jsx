@@ -6,16 +6,16 @@ export default function Electronic(props) {
   return (
     <div>
       <h3> Electronics</h3>
-      {electronics.map((product) => (
+      {electronics.map((electronic) => (
         <div>
-          <Link to={`/repair_guides/${id}`}> 
-          <p key={product?.id}>
+          <Link to={`/electronics/${id}`}> 
+          <p key={electronic?.id}>
             
-            {product?.name}
+            {electronic?.name}
             </p>
-            <img src={product?.image_url} alt="images"></img>
+            <img src={electronic?.image_url} alt="images"></img>
             </Link>
-          <p> {product?.description}</p>
+          <p> {electronic?.description}</p>
          
           </div>
       ))}
@@ -25,11 +25,6 @@ export default function Electronic(props) {
 }
 
 
-// i want to grab electronic seed data information
-// this maps through the seed data api
-// after map it displays the info from the seed
-// the seed info is the nintendo switch.  @nintendo_switch = Electronic.create!( name:'nintendo switch' , description:'The Nintendo Switch is a hybrid video game console, consisting of a console unit, a dock, and two Joy-Con controllers.', image_url: 'https://i.imgur.com/7dpAuXC.jpg',)
 
-// tldr: name, image and description of electronic seed data
 
 
