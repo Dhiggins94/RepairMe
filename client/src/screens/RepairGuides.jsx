@@ -16,6 +16,7 @@ export default function RepairGuides(props) {
               <Link to={`/repair_guides/${repair_guides?.id}/edit`}>
                 <button>Edit</button>
               </Link>
+              <br />
               <button onClick={() => handleDelete(repair_guides?.id)}>Delete</button>
             </div>
           )}

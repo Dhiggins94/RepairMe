@@ -6,7 +6,6 @@
 console.log(props)
    const [guides, setGuides] = useState(null);
    const { id } = useParams();
-  //  const {product} = props
 
    useEffect(() => {
      const fetchRepairGuide = async (id) => {

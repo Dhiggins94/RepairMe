@@ -50,14 +50,14 @@ export default function MainContainer(props) {
 
   const handleDelete = async (id) => {
     await deleteRepairGuide(id);
-    setGuides((prevState) => prevState.filter((guide) => guide.id !== id));
+    setGuides((prevState) => prevState.filter((guides) => guides.id !== id));
   };
 
 
   return (
     <div>
       <Switch>
-        <Route path="/repair_guides/:id">
+        <Route path="/repair_guides/:id/edit">
           <EditGuide guides={guides} handleUpdate={handleUpdate}/>
         </Route>
         <Route path='/repair_guides/new'>

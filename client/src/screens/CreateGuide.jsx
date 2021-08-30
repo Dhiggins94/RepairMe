@@ -3,9 +3,7 @@ import React, { useState } from 'react'
 export default function CreateGuide(props) {
   
   const [formData, setFormData] = useState({
-    image_url: '',
-    title: '',
-    steps: ''
+  name: ''
 
   });
   const { image_url, title, steps } = formData;
@@ -32,7 +30,7 @@ export default function CreateGuide(props) {
       <h3>Create Repair Guide</h3>
       <label>
         Image:
-        <input type='image_url'  src='image_url' name='image_url'  value={image_url} onChange={handleChange} />
+        <input type='text'  src='image_url' name='image_url'  value={image_url} onChange={handleChange} />
       </label>
       <br />
       <label>
@@ -41,7 +39,7 @@ export default function CreateGuide(props) {
       </label>
       <label>
         Steps:
-        <input type='textarea' name='steps' value={steps} onChange={handleChange} />
+        <input type='text' name='steps' value={steps} onChange={handleChange} />
       </label>
       <button>Submit</button>
     </form>
