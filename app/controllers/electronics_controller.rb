@@ -4,12 +4,12 @@ class ElectronicsController < ApplicationController
   def index
     @electronics = Electronic.all
 
-    render json: @electronics, include: :repair_guide, status: :ok
+    render json: @electronics, include: :repair_guides, status: :ok
   end
 
   # GET /electronics/1
   def show
-    render json: @electronic, include: :repair_guide, status: :ok
+    render json: @electronic, include: :repair_guides, status: :ok
   end
 
   # def create
