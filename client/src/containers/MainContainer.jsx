@@ -57,11 +57,16 @@ export default function MainContainer(props) {
   return (
     <div>
       <Switch>
-        <Route path="/repair_guides/:id/edit">
-          <EditGuide guides={guides} handleUpdate={handleUpdate}/>
+      <Route path='/repair_guides/new'>
+          <CreateGuide handleCreate={handleCreate}
+            currentUser={currentUser}
+            guides={guides}
+                      />
         </Route>
-        <Route path='/repair_guides/new'>
-          <CreateGuide handleCreate={handleCreate} />
+        <Route path="/repair_guides/:id/edit">
+          <EditGuide guides={guides} handleUpdate={handleUpdate}
+                      currentUser={currentUser}
+                      />
         </Route>
         <Route path='/repair_guides/:id'>
           <RepairGuidesDetails guides={guides} />
@@ -72,7 +77,7 @@ export default function MainContainer(props) {
         <Route path='/electronics'>
           <Electronic
             electronics={electronics}
-            handleDelete={handleDelete}
+            // handleDelete={handleDelete}
             currentUser={currentUser}
           />
         </Route>
