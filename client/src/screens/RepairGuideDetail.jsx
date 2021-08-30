@@ -19,7 +19,9 @@ console.log(props)
      <div>
        <h3>{guides?.title }</h3>
        {guides?.product.map((electronic) => (
-         <p key={electronic.id}>{electronic.id}</p>
+         <p key={electronic?.id}>
+           
+           {electronic?.steps}</p>
        ))}
        <form>
 

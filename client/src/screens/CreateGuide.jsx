@@ -37,6 +37,7 @@ export default function CreateGuide(props) {
         Title:
         <input type='text'  name="title" value={title} onChange={handleChange} />
       </label>
+      <br />
       <label>
         Steps:
         <input type='text' name='steps' value={steps} onChange={handleChange} />
