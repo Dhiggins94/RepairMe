@@ -1,18 +1,20 @@
 import React from 'react'
 import { useState, useEffect } from 'react';
-import { Switch, Route, useHistory } from 'react-router-dom';
+import { Switch, Route, useHistory, useParams } from 'react-router-dom';
 import { getAllRepairGuide, postRepairGuide, putRepairGuide, deleteRepairGuide } from '../services/repairGuide';
-import { getAllElectronics } from '../services/electronicItems'
+import { getAllElectronics, getElectronic} from '../services/electronicItems'
 import CreateGuide from '../screens/CreateGuide.jsx'
 import EditGuide from '../screens/EditGuide'
 import Electronic from '../screens/Electronic'
-import RepairGuides from '../screens/RepairGuides'
-import RepairGuidesDetails from '../screens/RepairGuideDetail'
+import RepairGuides from '../screens/RepairGuidesDetail'
+import RepairGuidesDetails from '../screens/RepairGuide'
+import ElectronicDetail from '../screens/ElectronicDetail'
 
 export default function MainContainer(props) {
   const [guides, setGuides] = useState([])
   const [electronics, setElectronics] = useState([]);
-
+  const [electronic, setElectronic] = useState([])
+  const {id} = useParams()
   const { currentUser } = props;
   const history = useHistory()
   
@@ -31,6 +33,17 @@ export default function MainContainer(props) {
     };
     fetchElectronics();
   }, []);
+
+  useEffect(() => {
+    const fetchElectronic = async () => {
+      const getElectronic = await getElectronic();
+      setElectronic(getElectronic);
+    };
+    fetchElectronic();
+  }, []);
+
+
+
 
   const handleCreate = async (formData) => {
     const guideData = await postRepairGuide(formData);
@@ -59,6 +72,8 @@ export default function MainContainer(props) {
       <Switch>
       <Route path='/repair_guides/new'>
           <CreateGuide handleCreate={handleCreate}
+                        electronic={electronic}
+
             currentUser={currentUser}
             guides={guides}
                       />
@@ -69,22 +84,25 @@ export default function MainContainer(props) {
                       />
         </Route>
         <Route path='/repair_guides/:id'>
-          <RepairGuidesDetails guides={guides} />
+          <RepairGuidesDetails guides={guides}
+                handleDelete={handleDelete}
+             />
         </Route>
         <Route path='/repair_guides'>
-          <RepairGuides RepairGuides={guides}/>
+          <RepairGuides RepairGuides={guides}
+              handleDelete={handleDelete}
+          />
         </Route>
         <Route path='/electronics/'>
           <Electronic
             electronics={electronics}
-            // handleDelete={handleDelete}
             currentUser={currentUser}
           />
         </Route>
         <Route path='/electronics/:id'>
-          <RepairGuidesDetails
+          <ElectronicDetail
             guides={guides}
-            // handleDelete={handleDelete}
+            electronic={electronic}
             currentUser={currentUser}
           />
         </Route>

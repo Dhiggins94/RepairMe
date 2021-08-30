@@ -4,7 +4,7 @@ export default function Layout(props) {
   const { currentUser, handleLogout } = props;
   return (
     <header>
-      <h1>Repair me!</h1>
+
       {currentUser ? (
         <div>
           <p>{currentUser.username}</p>
@@ -17,6 +17,7 @@ export default function Layout(props) {
       {currentUser && (
         <div>
           <Link to='/electronics'>Electronics</Link>
+          <br />
           <Link to='/repair_guides'>Repair Guides</Link>
         </div>
       )}

@@ -1,6 +1,6 @@
 import { Link, useParams } from 'react-router-dom';
 
-export default function RepairGuides(props) {
+export default function RepairGuidesDetail(props) {
   const { RepairGuides, handleDelete, currentUser } = props;
   const {id} = useParams()
   console.log(props)
@@ -10,8 +10,8 @@ export default function RepairGuides(props) {
       {RepairGuides?.map((repair_guides) => (
         <div key={repair_guides?.id}>
           <Link to={`/electronics/${id}`}>
-            <h3>{repair_guides?.title}</h3>
           </Link>
+          <h3>{repair_guides?.title}</h3>
           <p> {repair_guides?.steps}</p>
           <img src={repair_guides?.image_url} alt="images"></img>
           {currentUser?.id === RepairGuides?.user_id && (

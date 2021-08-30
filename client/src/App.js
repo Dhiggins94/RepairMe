@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Switch, Route, useHistory } from 'react-router-dom';
 import './App.css';
+import Navbar from './Navbar/Navbar.jsx';
 import MainContainer from './containers/MainContainer.jsx';
 import Layout from './components/Layout/Layout.jsx';
 import Login from './screens/Login.jsx';
@@ -45,6 +46,7 @@ function App() {
 
   return (
     <div className='App'>
+      <Navbar />
       <Layout currentUser={currentUser} handleLogout={handleLogout}>
         <Switch>
           <Route path='/login'>
