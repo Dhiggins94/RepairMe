@@ -6,17 +6,17 @@ export default function RepairGuides(props) {
   return (
     <div>
       <h3> RepairGuides</h3>
-      {RepairGuides.map((repair_guides) => (
+      {RepairGuides?.map((repair_guides) => (
         <div key={repair_guides.id}>
-          <Link to={`/repair_guides/${repair_guides.id}`}>
-            <p>{repair_guides.name}</p>
+          <Link to={`/repair_guides/${repair_guides?.id}`}>
+            <p>{repair_guides?.name}</p>
           </Link>
-          {currentUser?.id === RepairGuides.user_id && (
+          {currentUser?.id === RepairGuides?.user_id && (
             <div>
-              <Link to={`/repair_guides/${repair_guides.id}/edit`}>
+              <Link to={`/repair_guides/${repair_guides?.id}/edit`}>
                 <button>Edit</button>
               </Link>
-              <button onClick={() => handleDelete(repair_guides.id)}>Delete</button>
+              <button onClick={() => handleDelete(repair_guides?.id)}>Delete</button>
             </div>
           )}
         </div>

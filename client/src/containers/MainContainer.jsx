@@ -8,6 +8,7 @@ import EditGuide from '../screens/EditGuide'
 import Electronic from '../screens/Electronic'
 import RepairGuides from '../screens/RepairGuides'
 import RepairGuidesDetails from '../screens/RepairGuideDetail'
+
 export default function MainContainer(props) {
   const [guides, setGuides] = useState([])
   const [electronics, setElectronics] = useState([]);
@@ -15,8 +16,6 @@ export default function MainContainer(props) {
   const { currentUser } = props;
   const history = useHistory()
   
-
-
   useEffect(() => {
     const fetchGuides = async () => {
       const getGuides = await getAllRepairGuide();
@@ -58,9 +57,6 @@ export default function MainContainer(props) {
   return (
     <div>
       <Switch>
-        <Route path='/repair_guides'>
-          <RepairGuides guides={guides}/>
-        </Route>
         <Route path="/repair_guides/:id">
           <EditGuide guides={guides} handleUpdate={handleUpdate}/>
         </Route>
@@ -69,6 +65,9 @@ export default function MainContainer(props) {
         </Route>
         <Route path='/repair_guides/:id'>
           <RepairGuidesDetails guides={guides} />
+        </Route>
+        <Route path='/repair_guides'>
+          <RepairGuides RepairGuides={guides}/>
         </Route>
         <Route path='/electronics'>
           <Electronic

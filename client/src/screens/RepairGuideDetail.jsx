@@ -6,7 +6,7 @@
 console.log(props)
    const [guides, setGuides] = useState(null);
    const { id } = useParams();
-   const {product} = props
+  //  const {product} = props
 
    useEffect(() => {
      const fetchRepairGuide = async (id) => {
@@ -19,9 +19,9 @@ console.log(props)
    return (
      <div>
        <h3>{guides?.title }</h3>
-       {guides?.product.map((electronic) => {
+       {guides?.product.map((electronic) => (
          <p key={electronic.id}>{electronic.id}</p>
-       })}
+       ))}
        <form>
 
        </form>

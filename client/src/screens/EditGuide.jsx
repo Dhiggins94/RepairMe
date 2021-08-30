@@ -15,7 +15,7 @@ export default function EditGuide(props) {
   useEffect(()=> {
     const prefillFormData = () => {
       const repair = guides.find((guide)=> guide.id === Number(id));
-      setFormData({ image: repair.image , title: repair.title, steps:repair.steps})
+      setFormData({ image_url: repair.image_url , title: repair.title, steps:repair.steps})
     }
     if (guides.length) {
       prefillFormData()
@@ -23,10 +23,10 @@ export default function EditGuide(props) {
   }, [guides, id])
 
   const handleChange = (e) => {
-    const {image_url, value} = e.target;
+    const {name, value} = e.target;
     setFormData(prevState => ({
       ...prevState,
-      [image_url]: value
+      [name]: value
     }))
   }
 
@@ -40,8 +40,8 @@ export default function EditGuide(props) {
       <label>
         Image:
         <input 
-          type='image' 
-          image_url='image_url' alt="images"
+          type='image'  src='image_url' alt="images"
+          name='image_url'
           value={formData.image_url} 
           onChange={handleChange}
         />
@@ -50,7 +50,7 @@ export default function EditGuide(props) {
         Title:
         <input 
           type='text' 
-          title='title' 
+          name='title' 
           value={formData.title} 
           onChange={handleChange}
         />
@@ -59,7 +59,7 @@ export default function EditGuide(props) {
         Steps:
         <input 
           type='textarea' 
-          steps='steps' 
+          name='steps' 
           value={formData.steps} 
           onChange={handleChange}
         />

@@ -1,10 +1,10 @@
 import { useState, useEffect } from 'react';
 import { Switch, Route, useHistory } from 'react-router-dom';
 import './App.css';
-import MainContainer from './containers/MainContainer';
-import Layout from './components/Layout/Layout'
-import Login from './screens/Login';
-import Register from './screens/Register';
+import MainContainer from './containers/MainContainer.jsx';
+import Layout from './components/Layout/Layout.jsx';
+import Login from './screens/Login.jsx';
+import Register from './screens/Register.jsx';
 import {
   loginUser,
   registerUser,
@@ -42,9 +42,10 @@ function App() {
     removeToken();
     history.push('/');
   };
+
   return (
-    <div className="App">
-        <Layout currentUser={currentUser} handleLogout={handleLogout}>
+    <div className='App'>
+      <Layout currentUser={currentUser} handleLogout={handleLogout}>
         <Switch>
           <Route path='/login'>
             <Login handleLogin={handleLogin} />
@@ -62,3 +63,4 @@ function App() {
 }
 
 export default App;
+

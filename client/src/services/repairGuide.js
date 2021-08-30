@@ -11,12 +11,12 @@ export const getOneRepairGuide = async (id) => {
 };
 
 export const postRepairGuide = async (repairGuideData) => {
-  const resp = await api.post('/repair_guides', { repairGuide: repairGuideData });
+  const resp = await api.post('/repair_guides', { repair_guide: repairGuideData });
   return resp.data;
 };
 
 export const putRepairGuide = async (id, repairGuideData) => {
-  const resp = await api.put(`/repair_guides/${id}`, { repairGuide: repairGuideData });
+  const resp = await api.put(`/repair_guides/${id}`, { repair_guide: repairGuideData });
   return resp.data;
 };
 
