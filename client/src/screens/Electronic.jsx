@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 export default function Electronic(props) {
   const {electronics} = props
 
@@ -6,11 +7,16 @@ export default function Electronic(props) {
     <div>
       <h3> Electronics</h3>
       {electronics.map((product) => (
-        <div> 
-        <p key={product?.id}>
-          {product?.name}
-          </p>
+        <div>
+          <Link to="/"> 
+          <p key={product?.id}>
+            
+            {product?.name}
+            </p>
+            <img src={product?.image_url}></img>
+            </Link>
           <p> {product?.description}</p>
+         
           </div>
       ))}
       
