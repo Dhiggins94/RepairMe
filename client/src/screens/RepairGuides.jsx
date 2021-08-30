@@ -10,8 +10,10 @@ export default function RepairGuides(props) {
       {RepairGuides?.map((repair_guides) => (
         <div key={repair_guides?.id}>
           <Link to={`/repair_guides/${id}`}>
-            <p>{repair_guides?.title}</p>
+            <h3>{repair_guides?.title}</h3>
           </Link>
+          <p> {repair_guides?.steps}</p>
+          <img src={repair_guides?.image_url} alt="images"></img>
           {currentUser?.id === RepairGuides?.user_id && (
             <div>
               <Link to={`/repair_guides/${id}/edit`}>
