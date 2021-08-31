@@ -1,7 +1,14 @@
 .nav{
-  
+  text-decoration: none;
+  color: black;
   background-color:  #236780;
 
+
+}
+
+.nav :hover{
+  text-decoration: none;
+  color: black;
 
 }
 

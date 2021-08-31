@@ -9,7 +9,7 @@
 }
 
 .btn-delete{
-  background: linear-gradient(50deg, #44a2c4 15%, rgb(130, 186, 186)100%);
+  background: linear-gradient(50deg, red 15%, rgb(210, 114, 78)100%);
   height: 35px;
   width: 30%;
   border-radius: 999px;
