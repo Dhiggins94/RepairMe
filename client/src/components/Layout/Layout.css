@@ -1,18 +1,55 @@
-.username{
+.username {
   display: flexbox;
   text-align: left;
-  background-color: #f6f3f3;
   font-size: 30px;
-}@media (min-width: 412px){
-  .username{
+}
+
+@media (min-width: 412px) {
+  .username {
     font-size: 40px;
     line-height: 2;
     text-align: left;
   }
+}
+@media (max-width: 800px) {
+  .username {
+    font-size: 30px;
+    line-height: 2;
+    text-align: center;
   }
-  @media(max-width: 800px){
-    .username {font-size: 30px;
-      line-height: 2;
-      text-align: center;
-  }
-  }
+}
+
+.login-register {
+  text-decoration: none;
+  color: black;
+  background: linear-gradient(50deg, #44a2c4 15%, rgb(130, 186, 186) 100%);
+  height: 60px;
+  width: 60px;
+  cursor: pointer;
+  font-size: medium;
+}
+
+.login-register:hover {
+  text-decoration: none;
+  color: white;
+}
+
+
+.electronics{
+  text-decoration: none;
+color:white;
+}
+
+.guides{
+  text-decoration: none;
+color:white;
+}
+.electronics:hover{
+  text-decoration: none;
+  color: black;
+}
+
+.guides:hover{
+  text-decoration: none;
+  color: black;
+}

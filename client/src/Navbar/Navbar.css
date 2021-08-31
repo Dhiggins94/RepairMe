@@ -1,10 +1,12 @@
 .nav{
   text-decoration: none;
-  color: black;
-  background-color:  #236780;
-
-
+  color: white;
 }
+
+.link{
+  color:white
+}
+
 
 .nav :hover{
   text-decoration: none;

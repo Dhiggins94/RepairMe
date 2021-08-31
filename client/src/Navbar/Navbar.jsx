@@ -5,7 +5,7 @@ export default function Navbar() {
   return (
     <div className="nav">
       <nav>
-        <Link to="/">
+        <Link className="link" to="/">
           <h2>
             <p className="text"> Repair Me!</p>
           </h2>
