@@ -24,8 +24,7 @@ export default function EditGuide(props) {
       onSubmit={(e) => {
         e.preventDefault();
         handleUpdate(id, formData);
-      }}
-    >
+      }}>
       <label>
         Image:
         <input
@@ -50,7 +49,7 @@ export default function EditGuide(props) {
       <label>
         Steps:
         <input
-          type="textarea"
+          type="text"
           name="steps"
           value={formData.steps}
           onChange={handleChange}

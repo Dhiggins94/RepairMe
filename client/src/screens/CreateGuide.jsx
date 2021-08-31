@@ -3,9 +3,9 @@ import { useParams } from "react-router";
 import { postRepairGuide } from "../services/repairGuide";
 
 export default function CreateGuide(props) {
-  const [newGuide, setNewGuide] = useState(null);
+  const [ setNewGuide] = useState(null);
 
-  const [electronicId, setElectronicId] = useState("");
+  const [electronicId] = useState("");
   const [formData, setFormData] = useState({
     name: "",
     image_url: "",

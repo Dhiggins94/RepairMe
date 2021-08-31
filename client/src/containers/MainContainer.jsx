@@ -19,7 +19,7 @@ import './MainContainer.css'
 export default function MainContainer(props) {
   const [guides, setGuides] = useState([]);
   const [electronics, setElectronics] = useState([]);
-  const [electronic, setElectronic] = useState([]);
+  const [electronic] = useState([]);
   const { currentUser } = props;
   const history = useHistory();
 

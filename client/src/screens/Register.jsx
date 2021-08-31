@@ -21,8 +21,7 @@ export default function Register(props) {
       onSubmit={(e) => {
         e.preventDefault();
         handleRegister(formData);
-      }}
-    >
+      }} >
       <h3>Register</h3>
       <label>
         Username:

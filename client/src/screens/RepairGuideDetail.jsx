@@ -21,7 +21,6 @@ export default function RepairGuideDetail(props) {
       {guides?.product.map((electronic) => (
         <p key={electronic?.id}>{electronic?.steps}</p>
       ))}
-      <form></form>
     </div>
   );
 }
