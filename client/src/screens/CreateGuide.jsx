@@ -31,11 +31,6 @@ setNewGuide(newGuide)
       [name]: value,
     }));
   };
-
-
-
-
-
   return (
     <form
       onSubmit={(e) => {

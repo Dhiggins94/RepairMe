@@ -79,7 +79,8 @@ const [ electronic, setElectronic] = useState([])
                       />
         </Route>
         <Route path='/repair_guides/:id'>
-          <RepairGuidesDetails guides={guides} />
+          <RepairGuidesDetails guides={guides}
+          handleDelete={handleDelete}/>
 
         </Route>
         <Route path='/repair_guides'>
@@ -90,14 +91,12 @@ const [ electronic, setElectronic] = useState([])
         <Route path='/electronics/'>
           <Electronic
             electronics={electronics}
-            currentUser={currentUser}
           />
         </Route>
         <Route path='/electronics/:id'>
           <ElectronicDetail
             guides={guides}
             electronic={electronic}
-            currentUser={currentUser}
           />
         </Route>
       </Switch>
