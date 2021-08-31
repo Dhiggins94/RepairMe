@@ -6,8 +6,8 @@ import { getAllElectronics, getElectronic} from '../services/electronicItems'
 import CreateGuide from '../screens/CreateGuide.jsx'
 import EditGuide from '../screens/EditGuide'
 import Electronic from '../screens/Electronic'
-import RepairGuides from '../screens/RepairGuidesDetail'
-import RepairGuidesDetails from '../screens/RepairGuide'
+import RepairGuides from '../screens/RepairGuides'
+import RepairGuideDetail from '../screens/RepairGuideDetail'
 import ElectronicDetail from '../screens/ElectronicDetail'
 
 export default function MainContainer(props) {
@@ -79,13 +79,16 @@ const [ electronic, setElectronic] = useState([])
                       />
         </Route>
         <Route path='/repair_guides/:id'>
-          <RepairGuidesDetails guides={guides}
+          <RepairGuideDetail guides={guides}
+            currentUser={currentUser}
           handleDelete={handleDelete}/>
 
         </Route>
         <Route path='/repair_guides'>
-          <RepairGuides RepairGuides={guides}
-                                />
+          <RepairGuides 
+                      guides={guides}
+                      currentUser={currentUser}
+                    handleDelete={handleDelete}          />
           
         </Route>
         <Route path='/electronics/'>
