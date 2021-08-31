@@ -1,0 +1,62 @@
+
+.btn-edit{
+  background: linear-gradient(50deg, #44a2c4 15%,  rgb(130, 186, 186)100%);
+  height: 35px;
+  width: 30%;
+  border-radius: 999px;
+  cursor: pointer;
+  font-size: medium;
+}
+
+.btn-delete{
+  background: linear-gradient(50deg, #44a2c4 15%, rgb(130, 186, 186)100%);
+  height: 35px;
+  width: 30%;
+  border-radius: 999px;
+  cursor: pointer;
+  font-size: medium;
+}
+
+.btn-create{
+  background: linear-gradient(50deg, #44a2c4 15%,  rgb(130, 186, 186)100%);
+  height: 35px;
+  width: 30%;
+  border-radius: 999px;
+  cursor: pointer;
+  font-size: medium;
+}
+
+.btn-create:hover{
+  background-color: azure;
+  color:white
+}
+
+
+.btn-edit:hover{
+  background-color: azure;
+  color:white
+}
+
+.btn-delete:hover{
+  background-color: azure;
+  color:white
+}
+
+
+
+@media (min-width: 412px){
+  .guide-image{
+    display: flex;
+    flex-direction: column;
+    min-height: 50vh;
+    min-width: 50vw;
+  }
+  }
+  @media(max-width: 800px){
+    .guide-image {
+      display: flex;
+      flex-direction: column;
+      min-height: 50vh;
+      min-width: 50vw;
+  }
+  }

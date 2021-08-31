@@ -1,12 +1,13 @@
 import { Link } from 'react-router-dom';
-
+import "./Layout.css"
 export default function Layout(props) {
   const { currentUser, handleLogout } = props;
   return (
     <header>
+      
       {currentUser ? (
         <div>
-          <p>{currentUser.username}</p>
+          <h2 className="username"> Welcome! {currentUser.username} </h2>
           <button onClick={handleLogout}>Logout</button>
         </div>
       ) : (

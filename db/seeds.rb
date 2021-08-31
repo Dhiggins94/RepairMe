@@ -51,8 +51,8 @@ puts "#{Electronic.count} Electronic created!"
 puts "#{Electronic.count} Electronic created!"
 
 
-@repair_guide1 = RepairGuide.create!( user: @user, electronic: @nintendo_switch, image_url:'https://i.imgur.com/4tncUDi.png',
-title: 'how to repalce the nintendo switch rear panel',
+@repair_guide1 = RepairGuide.create!( user: @user, electronic: @nintendo_switch, image_url:'https://i.imgur.com/EdRXP6as.png',
+title: 'how to replace the nintendo switch rear panel',
 steps: 'step 1: remove the joycons from the switch, 
 step 2: remove the back-side screws of the switch, 
 step 3: remove the top and bottom screws of the switch, 
@@ -63,7 +63,7 @@ puts "#{RepairGuide.count} RepairGuide created!"
  
 
 
-@repair_guide2 = RepairGuide.create!( user: @user, electronic: @iphoneXs, image_url:'https://i.imgur.com/UKiIer0.png',
+@repair_guide2 = RepairGuide.create!( user: @user, electronic: @iphoneXs, image_url:'https://i.imgur.com/GqdBHIRs.png',
   title: 'iPhone XS Screen Replacement  ',
   steps: 'step 1: tape over any cracks, preferable with packing tape, 
   step 2: soften the adhesive using an heatgun,hairdresser if avalible, 

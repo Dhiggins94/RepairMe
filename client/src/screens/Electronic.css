@@ -1,0 +1,47 @@
+.e-image{
+  flex-direction: row;
+  min-height: 50vh;
+  min-width: 50vw;
+}
+
+
+
+
+
+
+  @media (min-width: 412px){
+    .e-description{
+      min-height: 50vh;
+      min-width: 50vw;
+      font-size: 20px;
+
+    }
+    }
+    
+    @media(max-width: 800px){
+      .e-description {
+        min-height: 50vh;
+        min-width: 50vw;
+        font-size: 30px;
+
+      }
+    }
+    
+
+    @media(max-width: 412px){
+      .e-text {
+        min-height: 50vh;
+        min-width: 50vw;
+        font-size: 20px;
+      }
+    }
+    
+
+    @media(max-width: 800px){
+      .e-text {
+        min-height: 50vh;
+        min-width: 50vw;
+        font-size: 30px;
+      }
+    }
+    

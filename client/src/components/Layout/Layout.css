@@ -1,0 +1,18 @@
+.username{
+  display: flexbox;
+  text-align: left;
+  background-color: #236780;
+  font-size: 30px;
+}@media (min-width: 412px){
+  .username{
+    font-size: 40px;
+    line-height: 2;
+    text-align: left;
+  }
+  }
+  @media(max-width: 800px){
+    .username {font-size: 30px;
+      line-height: 2;
+      text-align: center;
+  }
+  }

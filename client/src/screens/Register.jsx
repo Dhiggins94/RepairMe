@@ -1,10 +1,10 @@
-import { useState } from 'react';
+import { useState } from "react";
 
 export default function Register(props) {
   const [formData, setFormData] = useState({
-    username: '',
-    email: '',
-    password: '',
+    username: "",
+    email: "",
+    password: "",
   });
   const { handleRegister } = props;
 
@@ -27,8 +27,8 @@ export default function Register(props) {
       <label>
         Username:
         <input
-          type='text'
-          name='username'
+          type="text"
+          name="username"
           value={formData.username}
           onChange={handleChange}
         />
@@ -37,8 +37,8 @@ export default function Register(props) {
       <label>
         Email:
         <input
-          type='text'
-          name='email'
+          type="text"
+          name="email"
           value={formData.email}
           onChange={handleChange}
         />
@@ -47,8 +47,8 @@ export default function Register(props) {
       <label>
         Password:
         <input
-          type='password'
-          name='password'
+          type="password"
+          name="password"
           value={formData.password}
           onChange={handleChange}
         />

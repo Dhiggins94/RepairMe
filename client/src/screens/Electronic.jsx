@@ -1,27 +1,20 @@
-import React from 'react'
-import { useParams } from 'react-router-dom'
+import React from "react";
+import "./Electronic.css"
+
 export default function Electronic(props) {
-  const { electronics } = props
-  const {id} = useParams()
+  const { electronics } = props;
   return (
     <div>
       <h3> Electronics</h3>
       {electronics.map((electronic) => (
         <div>
-          <p key={electronic?.id}>
-            {electronic?.name}
-          </p>
-          <a href="/electronics/${id}">
-            <img src={electronic?.image_url} alt="images"></img>
+          <p className="e-text" key={electronic?.id}>{electronic?.name}</p>
+          <a href='/electronics/${id}'>
+            <img src={electronic?.image_url} alt="images" className="e-image"></img>
           </a>
-          </div>
+          <p className="e-description">{electronic?.description}</p>
+        </div>
       ))}
-            
     </div>
-  )
+  );
 }
-
-
-
-
-

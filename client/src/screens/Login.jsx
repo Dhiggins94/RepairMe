@@ -1,10 +1,10 @@
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function Login(props) {
   const [formData, setFormData] = useState({
-    username: '',
-    password: '',
+    username: "",
+    password: "",
   });
   const { handleLogin } = props;
 
@@ -27,8 +27,8 @@ export default function Login(props) {
       <label>
         Username:
         <input
-          type='text'
-          name='username'
+          type="text"
+          name="username"
           value={formData.username}
           onChange={handleChange}
         />
@@ -37,14 +37,14 @@ export default function Login(props) {
       <label>
         Password:
         <input
-          type='password'
-          name='password'
+          type="password"
+          name="password"
           value={formData.password}
           onChange={handleChange}
         />
       </label>
       <br />
-      <Link to='/register'>Register</Link>
+      <Link to="/register">Register</Link>
       <button>Submit</button>
     </form>
   );

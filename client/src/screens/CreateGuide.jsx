@@ -1,11 +1,11 @@
-import  { useEffect, useState } from "react";
+import { useState } from "react";
 import { useParams } from "react-router";
 import { postRepairGuide } from "../services/repairGuide";
 
 export default function CreateGuide(props) {
-  const [newGuide, setNewGuide] = useState(null)
-  
-  const [electronicId, setElectronicId] = useState("")
+  const [newGuide, setNewGuide] = useState(null);
+
+  const [electronicId, setElectronicId] = useState("");
   const [formData, setFormData] = useState({
     name: "",
     image_url: "",
@@ -15,17 +15,16 @@ export default function CreateGuide(props) {
   });
   const { name, image_url, title, steps } = formData;
   const { handleCreate, electronics } = props;
-  const { id } = useParams()
+  const { id } = useParams();
 
-console.log(electronics)
+  console.log(electronics);
   const handleSubmit = async (e) => {
-    e.preventDefault()
-    const newGuide = await postRepairGuide(id, electronicId)
-setNewGuide(newGuide)
-}
+    e.preventDefault();
+    const newGuide = await postRepairGuide(id, electronicId);
+    setNewGuide(newGuide);
+  };
 
-
-  const handleChange  = (e) => {
+  const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prevState) => ({
       ...prevState,
@@ -51,20 +50,15 @@ setNewGuide(newGuide)
           </option>
           {electronics?.map((electronic) => (
             <option value={electronic?.id} key={electronic?.id}>
-                {electronic?.name} 
-              </option>
+              {electronic?.name}
+            </option>
           ))}
-        </select> 
+        </select>
       </form>
       <h3>Create Repair Guide</h3>
       <label>
         Name:
-        <input
-          type="text"
-          name="name"
-          value={name}
-          onChange={handleChange}
-        />
+        <input type="text" name="name" value={name} onChange={handleChange} />
       </label>
       <br />
       <label>
@@ -79,12 +73,7 @@ setNewGuide(newGuide)
       <br />
       <label>
         Title:
-        <input
-          type="text"
-          name="title"
-          value={title}
-          onChange={handleChange}
-        />
+        <input type="text" name="title" value={title} onChange={handleChange} />
       </label>
       <br />
       <label>
