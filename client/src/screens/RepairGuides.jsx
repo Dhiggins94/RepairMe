@@ -11,7 +11,7 @@ export default function RepairGuides(props) {
         <div key={repair_guide?.id}>
           <Link to={`/electronics/${id}`}></Link>
           <h3>{repair_guide?.title}</h3>
-          <p> {repair_guide?.steps}</p>
+          <p className="steps">  {repair_guide?.steps}</p>
           <img src={repair_guide?.image_url} alt="images" className="guide-image"></img>
           {currentUser?.id === repair_guide?.user_id && (
             <div>

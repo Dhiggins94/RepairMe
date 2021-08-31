@@ -63,3 +63,14 @@
   background-size: contain;
   }
   }
+  @media (min-width: 412px){
+    .steps{
+font-size: 30px;  
+    }
+
+    }
+    @media(max-width: 800px){
+      .steps {
+   font-size: 20px;
+      }
+    }

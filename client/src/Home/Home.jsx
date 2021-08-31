@@ -1,5 +1,6 @@
 import React from 'react'
 import Logo from "../assets/Logo.gif"
+
 import "./Home.css"
 export default function Home() {
   return (
