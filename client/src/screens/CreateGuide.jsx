@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import  { useEffect, useState } from "react";
 import { useParams } from "react-router";
 import { postRepairGuide } from "../services/repairGuide";
-// import Electronic from "./Electronic";
 
 export default function CreateGuide(props) {
   const [newGuide, setNewGuide] = useState(null)
+  
   const [electronicId, setElectronicId] = useState("")
   const [formData, setFormData] = useState({
     name: "",
@@ -15,8 +15,8 @@ export default function CreateGuide(props) {
   const { name, image_url, title, steps } = formData;
   const { handleCreate, electronics } = props;
   const { id } = useParams()
-  
 
+console.log(electronics)
   const handleSubmit = async (e) => {
     e.preventDefault()
     const newGuide = await postRepairGuide(id, electronicId)
@@ -32,6 +32,10 @@ setNewGuide(newGuide)
     }));
   };
 
+
+
+
+
   return (
     <form
       onSubmit={(e) => {
@@ -39,9 +43,6 @@ setNewGuide(newGuide)
         handleCreate(formData);
       }}
     >
-
-
-
       <form onSubmit={handleSubmit}>
         <select
           className="dropdown"
@@ -49,23 +50,16 @@ setNewGuide(newGuide)
           defaultValue="default"
           onChange={handleChange}
         >
-
           <option disabled value="default">
             select electronic
           </option>
           {electronics?.map((electronic) => (
-            <div> 
             <option value={electronic?.id} key={electronic?.id}>
-                {electronic?.name}
-                
+                {electronic?.name} 
               </option>
-              </div>
           ))}
         </select> 
       </form>
-
-
-
       <h3>Create Repair Guide</h3>
       <label>
         Name:
