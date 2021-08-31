@@ -16,18 +16,18 @@ export default function RepairGuides(props) {
           {currentUser?.id === repair_guide?.user_id && (
             <div>
               <Link to={`/repair_guides/${repair_guide.id}/edit`}>
-                <button className="btn-edit">Edit</button>
+                <button className="btn-edit">Edit Guide</button>
               </Link>
               <br />
               <button onClick={() => handleDelete(repair_guide.id)} className="btn-delete">
-                Delete
+                Delete Guide
               </button>
             </div>
           )}
         </div>
       ))}
       <Link to="/repair_guides/new">
-        <button className='btn-create'>Create</button>
+        <button className='btn-create'>Create Guide</button>
       </Link>
     </div>
   );
