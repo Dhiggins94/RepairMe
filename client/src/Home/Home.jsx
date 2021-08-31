@@ -5,10 +5,10 @@ export default function Home() {
   return (
     <div className="home-container">
       <h1> Welcome to repair me</h1>
-      <p> this is a website where you can find repair guides</p>
-      <p> for electronics.</p>
-      <h4>Pressing Electronics shows all electronics avaliable</h4>
-      <h4>Pressing Repair Guides shows all Repair Guides avaliable</h4>
+      <h2> this is a website where you can find repair guides</h2>
+      <h2> for electronics.</h2>
+      <h3>Pressing Electronics shows all electronics avaliable</h3>
+      <h3>Pressing Repair Guides shows all Repair Guides avaliable</h3>
       <img src={Logo} className="image" alt="images"></img>
     </div>
   )
