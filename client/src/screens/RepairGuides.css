@@ -46,17 +46,20 @@
 
 @media (min-width: 412px){
   .guide-image{
-    display: flex;
-    flex-direction: column;
-    min-height: 50vh;
-    min-width: 50vw;
+   
+  
+    max-width: 450px; 
+    max-height: 450px;
+    background-size: contain;
+
   }
   }
   @media(max-width: 800px){
     .guide-image {
-      display: flex;
-      flex-direction: column;
-      min-height: 50vh;
-      min-width: 50vw;
+  
+  
+  max-width: 450px; 
+  max-height: 450px;
+  background-size: contain;
   }
   }

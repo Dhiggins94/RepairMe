@@ -1,7 +1,7 @@
 .e-image{
-  flex-direction: row;
-  min-height: 50vh;
-  min-width: 50vw;
+  flex-direction: column;
+  min-height: 10vh;
+  min-width: 10vw;
 }
 
 
@@ -30,8 +30,8 @@
 
     @media(max-width: 412px){
       .e-text {
-        min-height: 50vh;
-        min-width: 50vw;
+        min-height: 10vh;
+        min-width: 10vw;
         font-size: 20px;
       }
     }
@@ -39,8 +39,8 @@
 
     @media(max-width: 800px){
       .e-text {
-        min-height: 50vh;
-        min-width: 50vw;
+        min-height: 10vh;
+        min-width: 10vw;
         font-size: 30px;
       }
     }
