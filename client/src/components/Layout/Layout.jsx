@@ -4,7 +4,6 @@ export default function Layout(props) {
   const { currentUser, handleLogout } = props;
   return (
     <header>
-
       {currentUser ? (
         <div>
           <p>{currentUser.username}</p>
