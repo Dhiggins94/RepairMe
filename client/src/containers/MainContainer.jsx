@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState, useEffect } from 'react';
-import { Switch, Route, useHistory, useParams } from 'react-router-dom';
-import { getAllRepairGuide, getOneRepairGuide, postRepairGuide, putRepairGuide, deleteRepairGuide } from '../services/repairGuide';
+import { Switch, Route, useHistory } from 'react-router-dom';
+import { getAllRepairGuide, postRepairGuide, putRepairGuide, deleteRepairGuide } from '../services/repairGuide';
 import { getAllElectronics, getElectronic} from '../services/electronicItems'
 import CreateGuide from '../screens/CreateGuide.jsx'
 import EditGuide from '../screens/EditGuide'
@@ -13,10 +13,7 @@ import ElectronicDetail from '../screens/ElectronicDetail'
 export default function MainContainer(props) {
   const [guides, setGuides] = useState([])
   const [electronics, setElectronics] = useState([]);
-  const [electronic, setElectronic] = useState([])
-  const [electronicId, setElectronicId] = useState("")
-
-  // const {id} = useParams()
+const [ electronic, setElectronic] = useState([])
   const { currentUser } = props;
   const history = useHistory()
   
@@ -38,29 +35,10 @@ export default function MainContainer(props) {
 
   // useEffect(() => {
   //   const fetchElectronic = async () => {
-  //     const getElectronic = await getElectronic();
+  //     const getElectronic = await getElectronic()
   //     setElectronic(getElectronic);
   //   };
-  //   fetchElectronic();
-  // }, []);
-
-
-  useEffect(() => {
-    const fetchElectronics = async () => {
-      const getElectronics = await getAllElectronics();
-      console.log(getElectronics[0])
-      setElectronicId(getElectronics[0]);
-    };
-    fetchElectronics();
-    
-  }, []);
-
-  // useEffect(() => {
-  //   const fetchOneGuide = async () => {
-  //     const getOneGuide = await getOneRepairGuide();
-  //     setGuides(getOneRepairGuide);
-  //   };
-  //   fetchOneGuide();
+  //   fetchElectronic()
   // }, []);
 
   const handleCreate = async (formData) => {
@@ -81,7 +59,7 @@ export default function MainContainer(props) {
 
   const handleDelete = async (id) => {
     await deleteRepairGuide(id);
-    setGuides((prevState) => prevState.filter((guide) => guide.id !== id));
+    setGuides((prevState) => prevState.filter((guides) => guides.id !== id));
   };
 
 
@@ -90,23 +68,24 @@ export default function MainContainer(props) {
       <Switch>
       <Route path='/repair_guides/new'>
           <CreateGuide handleCreate={handleCreate}
-                   electronics={electronics}   />
+            currentUser={currentUser}
+            guides={guides}
+            electronics={electronics}  
+                      />
         </Route>
         <Route path="/repair_guides/:id/edit">
-          <EditGuide guides={guides}
-            handleUpdate={handleUpdate}
-            // currentUser={currentUser}
+          <EditGuide guides={guides} handleUpdate={handleUpdate}
+                      currentUser={currentUser}
                       />
         </Route>
         <Route path='/repair_guides/:id'>
-          <RepairGuidesDetails guides={guides}
-             />
+          <RepairGuidesDetails guides={guides} />
+
         </Route>
         <Route path='/repair_guides'>
           <RepairGuides RepairGuides={guides}
-            handleDelete={handleDelete}
-            currentUser={currentUser}
-          />
+                                />
+          
         </Route>
         <Route path='/electronics/'>
           <Electronic
