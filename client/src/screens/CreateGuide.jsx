@@ -10,6 +10,7 @@ export default function CreateGuide(props) {
     name: "",
     image_url: "",
     title: "",
+    electronic_id: "",
     steps: "",
   });
   const { name, image_url, title, steps } = formData;
@@ -41,7 +42,7 @@ setNewGuide(newGuide)
       <form onSubmit={handleSubmit}>
         <select
           className="dropdown"
-          name="electronic-id"
+          name="electronic_id"
           defaultValue="default"
           onChange={handleChange}
         >
