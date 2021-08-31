@@ -61,7 +61,7 @@ export default function MainContainer(props) {
   };
 
   return (
-    <div>
+    <div className="container">
       <Switch>
         <Route path="/repair_guides/new">
           <CreateGuide

@@ -5,7 +5,7 @@ export default function Electronic(props) {
   const { electronics } = props;
   return (
     <div>
-      <h3> Electronics</h3>
+      <h2> List of all Electronics</h2>
       {electronics.map((electronic) => (
         <div>
           <p className="e-text" key={electronic?.id}>{electronic?.name}</p>
