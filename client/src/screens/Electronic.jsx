@@ -1,5 +1,5 @@
 import React from "react";
-import "./Electronic.css"
+import "./electronic.css"
 import { useParams } from "react-router";
 export default function Electronic(props) {
   const {id} = useParams()

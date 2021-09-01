@@ -1,5 +1,5 @@
 import { Link, useParams } from "react-router-dom";
-import "./RepairGuides.css"
+import "./repairGuides.css"
 export default function RepairGuides(props) {
   const { guides, handleDelete, currentUser } = props;
   const { id } = useParams();
