@@ -48,8 +48,8 @@
   .guide-image{
    
   
-    max-width: 500px; 
-    max-height: 500px;
+    min-width: 300px; 
+    min-height: 300px;
     background-size: contain;
 
   }
