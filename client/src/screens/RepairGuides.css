@@ -50,7 +50,7 @@
   
     min-width: 200px; 
     min-height: 200px;
-    background-size:auto;
+    /* background-size:auto; */
 
   }
   }
@@ -60,7 +60,7 @@
   
   max-width: 450px; 
   max-height: 450px;
-  background-size: auto;
+  /* background-size: auto; */
   }
   }
   @media (min-width: 412px){
