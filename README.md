@@ -2,6 +2,7 @@
 
 
 # PROJECT 4 README
+[Repair me website](https://relaxed-nobel-ad20d2.netlify.app/)
 
 
 - [Overview](#overview)
@@ -159,10 +160,28 @@ src
 
 ## Code Showcase
 
-> Use this section to include a brief code snippet of functionality that you are proud of and a brief description.
+> Im proud of this code snippet because it's my dropdown list. i was having great diffiuclty in applying since i wanted the them to be connected by their electronic ID and it after a long struggle of doing so it turned out the fix was very simple which was to change electronic.id  into a electronic_id.
 
+
+  ```
+  <form onSubmit={handleSubmit}>
+        <select
+          className="dropdown"
+          name="electronic_id"
+          defaultValue="default"
+          onChange={handleChange}
+        >
+          <option disabled value="default">
+            select electronic
+          </option>
+          {electronics?.map((electronic) => (
+            <option value={electronic?.id} key={electronic?.id}>
+              {electronic?.name}
+            </option>
+          ))}
+        </select>
+      </form>
+  ```
 ## Code Issues & Resolutions
 
-> Use this section to list of all major issues encountered and their resolution.
-
-
+> one problem problem i had was my crud funtionality, nothing would be created properly due to error 422's and the answer to those was to connect my frontend better to by backend by changing my syntax. 
