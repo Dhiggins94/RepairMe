@@ -48,9 +48,9 @@
   .guide-image{
    
   
-    min-width: 300px; 
-    min-height: 300px;
-    background-size: contain;
+    min-width: 200px; 
+    min-height: 200px;
+    background-size:auto;
 
   }
   }
@@ -60,7 +60,7 @@
   
   max-width: 450px; 
   max-height: 450px;
-  background-size: contain;
+  background-size: auto;
   }
   }
   @media (min-width: 412px){
